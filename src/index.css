@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  @apply bg-violet-600 text-white;
+}
+
+/* firefox */
+::-moz-selection {
+  @apply bg-violet-600 text-white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-violet-600 rounded-lg;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-violet-500;
+}
+
+/* reused class */
+.pushtocenter {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.navigation {
+  @apply fixed top-0 left-5 right-5 h-24 shadow-sm shadow-white z-50 bg-white;
+}
+
+.navbar {
+  @apply relative mt-3 bg-violet-700 h-20 rounded-lg shadow-lg hover:shadow-xl active:scale-95 cursor-pointer transition-all;
+}
+
+.navbar span {
+  @apply pushtocenter text-white text-3xl;
+}
+
+.navbar div {
+  @apply absolute top-1/2 right-5 -translate-y-1/2 px-3 py-2 border-2 rounded-full bg-violet-600 border-white text-white;
+}
+
+.navform {
+  @apply relative bg-white grid grid-cols-3 mt-1 px-7 py-5 rounded-xl shadow-xl;
+}
+
+.navforminput {
+  @apply relative outline-none m-4 h-12 border-b-2 border-b-slate-300 focus-within:border-b-violet-600;
+}
+
+.customselect {
+  @apply cursor-pointer;
+}
+
+.customselect-input {
+  @apply outline-none h-full w-full ml-1;
+}
+
+.customselect-ul {
+  @apply absolute top-14 -translate-y-1 w-full max-h-96 bg-white border rounded-md overflow-auto z-50;
+}
+
+.customselect-li {
+  @apply px-3 py-2 hover:bg-violet-300 transition-all;
+}
+
+.sourceinput {
+  @apply customselect;
+}
+
+.sourceinput-p {
+  @apply relative top-1/2 -translate-y-1/2 ml-1;
+}
+
+.sourceinput-input {
+  @apply outline-none sourceinput-li top-0 min-w-full hover:bg-white;
+}
+
+.sourceinput-ul {
+  @apply customselect-ul;
+  z-index: 40;
+}
+
+.sourceinput-li {
+  @apply customselect-li bg-white;
+}
+
+.sourceinput-li-checked {
+  @apply customselect-li bg-violet-500 text-white;
+}
+
+.input-note {
+  @apply absolute -bottom-1 -mb-4 text-xs text-gray-500;
+}
+
+.disabled {
+  @apply bg-gray-100 text-gray-400 pointer-events-none;
+}
+
+.ddarrow {
+  @apply absolute top-1/2 right-3 -translate-y-1/2;
+}
+
+.navform button {
+  @apply bg-violet-600 m-4 h-11 rounded-lg text-white text-lg hover:bg-violet-500 active:scale-95 transition-all;
+}
+
+.newsfeed {
+  @apply relative min-h-screen px-3 pt-32 z-30;
+}
+
+.newsfeedmessage {
+  @apply pushtocenter text-3xl text-gray-500;
+}
+
+.news-masonry {
+  /* display: -webkit-box; /* Not needed if autoprefixing */
+  /* display: -ms-flexbox; Not needed if autoprefixing */
+  display: flex;
+  width: auto;
+}
+.news-masonry-column {
+  padding-left: 10px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.newscard {
+  @apply mx-6 mb-11 relative border bg-white shadow-sm rounded-lg active:scale-95 active:shadow-md hover:scale-105 transition-transform;
+}
+
+.newscard img {
+  @apply object-cover w-full rounded-t-lg;
+}
+
+.newscontent {
+  @apply mx-4 mt-2 mb-9;
+}
+
+.newspublished {
+  @apply block text-gray-500;
+}
+
+.newssource {
+  @apply absolute bottom-1 left-4 text-blue-600 text-xs;
+}
+
+.newsauthor {
+  @apply absolute bottom-1 right-4 text-blue-600 text-xs;
+}
+
+.loadmorebtn {
+  @apply relative bottom-3 left-1/2 -translate-x-1/2 w-40 p-2 bg-violet-700 text-white rounded-md shadow-md hover:bg-violet-600 active:scale-95 transition-all disabled:bg-violet-400 disabled:shadow-none disabled:active:scale-100;
+}
+
+.backtotop {
+  @apply fixed bottom-7 right-7 bg-violet-600 shadow-md rounded-md hover:bg-violet-500 active:scale-75 transition-all cursor-pointer z-50;
+}
