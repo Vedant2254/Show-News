@@ -75,7 +75,7 @@ The api that is used in this project to get the curated news articles is [NewsAP
 - [redux-toolkit](https://www.npmjs.com/package/redux-toolkit) and [react-redux](https://www.npmjs.com/package/react-redux) are the required npm packages to include redux store in react application.
 - **redux-toolkit** is used to set-up the store, while **react-redux** provides hooks like `useSelector` and `useDispatch` to access the state variables and dispatch actions to update the state variables.
 
-### Why not prop drilling or useContext?
+## Why not prop drilling or useContext?
 
 - There are many state variables so prop drilling isn't a scalable way to store and manipulate the states.
 - useContext could be used but the kind of data that needed to be stored in state was frequently changing, like a variable that decides if the form if visible or not.
